@@ -53,7 +53,7 @@ JDK 1.7以上
   tweetタグが1つのツイートに対応してします。
   textタグがツイートの本文、mediaPathタグがアップロードする画像のファイルパスになります。
   mediaPathは1つのツイートに付き4つまで指定できます。画像をアップロードしない場合は省略可能です。
-  ```XML
+  ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <tweetList xmlns="http://jdno.org/eztweetj/xml">
   <tweet>
@@ -74,6 +74,7 @@ JDK 1.7以上
 下記のURLからzipファイルをダウンロードし、zipファイルを展開してください。
 本体のjarファイルと起動のためのスクリプトファイルが格納されています。
 
+[release](https://github.com/Rheud/eztweetj/tree/master/release/)
 
 ## Author
 
