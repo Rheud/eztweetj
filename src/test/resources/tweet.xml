@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tweetList xmlns="http://jdno.org/eztweetj/xml">
+  <tweet>
+    <text>これはテストツイートです。</text>
+    <mediaPath>src/test/resources/img/01.jpg</mediaPath>
+    <mediaPath>src/test/resources/img/02.jpg</mediaPath>
+    <mediaPath>src/test/resources/img/03.jpg</mediaPath>
+    <mediaPath>src/test/resources/img/04.jpg</mediaPath>
+  </tweet>
+  <tweet>
+    <text>連続ツイートのテストです。</text>
+  </tweet>
+</tweetList>

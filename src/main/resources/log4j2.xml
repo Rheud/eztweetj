@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+  <Appenders>
+    <Console name="ConsoleStdOut" target="SYSTEM_OUT">
+      <ThresholdFilter level="ERROR" onMatch="DENY" onMismatch="ACCEPT"/>
+      <PatternLayout pattern="%d{yyyy/MM/dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </Console>
+    <Console name="ConsoleStdErr" target="SYSTEM_ERR">
+      <ThresholdFilter level="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
+      <PatternLayout pattern="%d{yyyy/MM/dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </Console>
+    <Console name="SimpleConsoleStdOut" target="SYSTEM_OUT">
+      <PatternLayout pattern="%msg\n"/>
+    </Console>
+  </Appenders>
+
+  <Loggers>
+    <Logger name="org.ehcache" level="error" additivity="false">
+      <AppenderRef ref="ConsoleStdOut"/>
+      <AppenderRef ref="ConsoleStdErr"/>
+    </Logger>
+    <Logger name="org.terracotta.offheapstore" level="error" additivity="false">
+      <AppenderRef ref="ConsoleStdOut"/>
+      <AppenderRef ref="ConsoleStdErr"/>
+    </Logger>
+    <Logger name="org.springframework" level="error" additivity="false">
+      <AppenderRef ref="ConsoleStdOut"/>
+      <AppenderRef ref="ConsoleStdErr"/>
+    </Logger>
+    <Logger name="twitter4j" level="error" additivity="false">
+      <AppenderRef ref="ConsoleStdOut"/>
+      <AppenderRef ref="ConsoleStdErr"/>
+    </Logger>
+    <Logger name="SimpleConsoleStdOut" level="info" additivity="false">
+      <AppenderRef ref="SimpleConsoleStdOut"/>
+    </Logger>
+
+    <Root level="info">
+      <AppenderRef ref="ConsoleStdOut"/>
+      <AppenderRef ref="ConsoleStdErr"/>
+    </Root>
+  </Loggers>
+
+</Configuration>

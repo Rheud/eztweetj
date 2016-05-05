@@ -1,0 +1,24 @@
+<?xml version="1.0"?> 
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  targetNamespace="http://jdno.org/eztweetj/xml"
+  xmlns:etw="http://jdno.org/eztweetj/xml"
+  elementFormDefault="qualified">
+
+  <xsd:element name="tweetList">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="etw:tweet" minOccurs="1" maxOccurs="unbounded" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="tweet">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="text" type="xsd:string"/>
+        <xsd:element name="mediaPath" type="xsd:string" minOccurs="0" maxOccurs="4" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+</xsd:schema>
